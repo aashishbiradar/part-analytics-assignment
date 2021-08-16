@@ -1,0 +1,163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "part-analytics- assignment",
+		"_postman_id": "5bc592ed-d645-50f6-c2b3-1ff558a0e1a1",
+		"description": "Part Analytics Assignment - Game Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/ping",
+			"request": {
+				"url": "localhost:3000/ping",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/user/signup",
+			"request": {
+				"url": "localhost:3000/api/user/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"user2\",\n\t\"email\": \"user2@gmail.com\",\n\t\"password\": \"user0001\",\n\t\"age\": \"22\",\n\t\"city\": \"Bengluru\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/user/me",
+			"request": {
+				"url": "localhost:3000/api/user/me",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNiIsImVtYWlsIjoidXNlcjVAZ21haWwuY29tIn0sImlhdCI6MTYyODk2NzIxMiwiZXhwIjoxNjI4OTg4ODEyfQ.zbOGuUNNupun4w0r4PAE-yqrKTF-Q39KUJ0AqFSuSc8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/game/create",
+			"request": {
+				"url": "localhost:3000/api/game/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNTIxNTQ0NTUtOTFkYy00NTg4LTgyNmYtZDZiZWRhMTQ4YmQzIiwiZW1haWwiOiJhZG1pbjFAZ21haWwuY29tIn0sImlhdCI6MTYyOTEwODU3MSwiZXhwIjoxNjI5MTMwMTcxfQ.YzijJPLXFrRZDDoXF3-s1BjSTr9LlVPLyI0ZLGJ5HZk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"simcity\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/game/list",
+			"request": {
+				"url": "localhost:3000/api/game/list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNTIxNTQ0NTUtOTFkYy00NTg4LTgyNmYtZDZiZWRhMTQ4YmQzIiwiZW1haWwiOiJhZG1pbjFAZ21haWwuY29tIn0sImlhdCI6MTYyOTExMTY4NCwiZXhwIjoxNjI5MTMzMjg0fQ.JANs_lDZMoO7fbWnVa9r9_yavyW_xhvkrQ1mSJ4mWiQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/user/login",
+			"request": {
+				"url": "localhost:3000/api/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"admin1@gmail.com\",\n\t\"password\": \"admin1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/game/submit-score",
+			"request": {
+				"url": "localhost:3000/api/game/submit-score",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYzZiNjBkNGUtODFiOC00ZjRmLTkwNTctYzE5MDdjZDRlZGI0IiwiZW1haWwiOiJ1c2VyMkBnbWFpbC5jb20ifSwiaWF0IjoxNjI5MTA5OTAwLCJleHAiOjE2MjkxMzE1MDB9.fQbTi7ho9OszSo4NuQHeGS_V7s60-J2wEIELhE4yujI",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"gameId\": \"8b8fc45d-49d3-4cf2-b099-f4459fb0ff64\",\n\t\"score\": 1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/user/list",
+			"request": {
+				"url": "localhost:3000/api/user/list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNTIxNTQ0NTUtOTFkYy00NTg4LTgyNmYtZDZiZWRhMTQ4YmQzIiwiZW1haWwiOiJhZG1pbjFAZ21haWwuY29tIn0sImlhdCI6MTYyOTEwODU3MSwiZXhwIjoxNjI5MTMwMTcxfQ.YzijJPLXFrRZDDoXF3-s1BjSTr9LlVPLyI0ZLGJ5HZk",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
