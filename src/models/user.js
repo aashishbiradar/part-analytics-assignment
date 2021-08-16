@@ -4,6 +4,12 @@ const sequelize = require('../services/sequelize');
 class User extends Model {}
 
 User.init({
+  id: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    allowNull: false,
+    primaryKey: true
+  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -33,7 +39,7 @@ User.init({
   }
 }, {
   sequelize,
-  modelName: 'User',
+  modelName: 'user',
 });
 
 module.exports = User;

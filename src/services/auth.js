@@ -2,7 +2,7 @@ const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 
-const User = require('../models/user');
+const { User, UserSession } = require('../models');
 const config = require('../config');
 
 module.exports = {
@@ -43,5 +43,15 @@ module.exports = {
     }
     const userObj = _.omit(userRecord.toJSON(), ['password']);
     return userObj;
+  },
+
+  async createSession(userId) {
+    const session = await UserSession.create({ userId });
+    return session;
+  },
+
+  async listUsers() {
+    const users = await User.findAll();
+    return users;
   },
 };
